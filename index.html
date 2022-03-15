@@ -1,12 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+
+
+
+
+<!-- This is where we explain the app   -->
+      <section class="welcomeInfo">
+          <div class="row">
+            <p class="lead"><strong>Welcome to Karaoke Kings</strong> This application allows you to search for lyrics
+            to all of your favorite songs!</p>
+          </div>
+      </section>
+
+<!-- This is the search bar for songs :D  -->
+      <section class="searchBar">
+          <div class="row">
+            <div class="input-group input-group-rounded">
+              <input class="input-group-field" type="search" id="searchArtist" placeholder="Artist"> 
+              <input class="input-group-field" type="search" id="searchSong" placeholder="Song"> 
+            <div class="input-group-button">
+              <button class="button secondary theButton">Search!!!</button>
+              </div>
+           </div>   
+          </div> 
+      </section>
+
+  
+  <!-- Lyrics go here!! -->
+    <div id="lyricsDisplay">
+  <!-- Lyrics goes here -->
+    </div> 
+
+  </div>
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="js/script.js"></script>
+    <script src="js/savedScript.js"></script>
+    <script src="js/indexfun.js"></script>
 </body>
 </html>
