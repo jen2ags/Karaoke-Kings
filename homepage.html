@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Sansita+Swashed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets\css\style.css" />
+    <title>Karaoke Kings</title>
+</head>
+
+<body>
+    <!-- Logo and Navbar -->
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <!-- add github deployed page in href -->
+                <a class="navbar-item" href="/">
+                    <h1>
+                        Karaoke Kings
+                    </h1>
+                </a>
+            </div>
+
+            <div class="navbar-end page-hover">
+                <!-- link href -->
+                <!-- get started nav scrolls down-->
+                <a class="navbar-item" href="#get-started">
+                    Get Started
+                </a>
+                <!-- Your library is linked to library.html -->
+                <a class="navbar-item" href="library.html">
+                    Your Library
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="hero mx-5 my-6">
+        <div class="hero-cta has-text-centered">
+            <h2 class="title">
+                Calling all Karaoke Kings!
+            </h2>
+            <p class="subtitle mx-6 my-5">
+                I'm baby messenger bag vegan godard post-ironic leggings selfies single-origin coffee taiyaki pour-over
+                live-edge pickled sustainable helvetica blue bottle banh mi.
+                Yr freegan hammock, unicorn synth kombucha flannel shabby chic paleo forage.
+                Iceland asymmetrical sartorial occupy chambray air plant gochujang.
+            </p>
+            <!-- Ready to begin button format -->
+            <span class="has-text-centered">
+                <a href="#get-started">
+                    <button type="button" class="btn startBtn button">
+                        Ready to Begin?
+                    </button>
+                </a>
+            </span>
+        </div>
+    </main>
+
+    <!-- Get Started Section -->
+    <section id="get-started">
+        <h3 class="subtitle has-text-centered mx-6 my-2 py-5">Sing Your Heart Out!</h3>
+        <p class="instructions has-text-centered my-2 mx-6 px-6">
+            I'm baby keffiyeh fixie tilde mustache banjo tofu banh mi organic taxidermy VHS distillery. Enamel pin
+            cornhole pug hot chicken VHS man braid migas small batch pop-up la croix typewriter try-hard tilde prism
+            hell of.
+            Keytar leggings organic pickled. You probably haven't heard of them portland taxidermy try-hard selfies
+            chicharrones venmo hammock marfa raw denim synth gastropub butcher mixtape viral. Paleo DIY succulents
+            farm-to-table tbh prism.
+        </p>
+    </section>
+    <!-- Artist/Song search form -->
+    <section class="searchBar">
+        <div class="row">
+            <div class="field is-horizontal mx-6 my-6">
+                <div class="input-group input-group-rounded">
+                    <div class="field-label">
+                        <label class="label">Artist Name</label>
+                        <input class="input-group-field" type="search" id="searchArtist" placeholder="Artist">
+                        <div class="field">
+                            <p class="control is-expanded">
+                            <div class="field-label">
+                                <label class="label">Song Name</label>
+                                <input class="input-group-field" type="search" id="searchSong" placeholder="Song">
+                                <div class="field">
+                                    <p class="control is-expanded">
+                                    <div class="input-group-button">
+                                        <button class="button secondary theButton">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- containers for music player and lyrics -->
+    <!-- Lyrics go here!! -->
+
+    <!-- add flex responsiveness for mobile-->
+    <section class="section">
+        <div class="container">
+            <div class="columns has-text-centered is-vcentered is-mobile">
+                <label class="label is-1">Artist Playing: </label>
+                <div class="column is-5">
+                    Artist
+                </div>
+                <label class="label is-1">Lyrics: </label>
+                <div class="column is-5">
+                    Lyrics
+                    <!-- Lyrics goes here -->
+                    <div id="lyricsDisplay">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="content has-text-centered is-small">
+            <p> &copy; 2022 | Built with &#128420; by Cheryl Cruz, Mason Urrabas, and Jennifer Jennings</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets\js\script.js"></script>
+    <script src="assets\js\savedScript.js"></script>
+</body>
+
+</html>
