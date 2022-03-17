@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <!-- add github deployed page in href -->
-                <a class="navbar-item" href="https://jen2ags.github.io/Karaoke-Kings/">
+                <a class="navbar-item" href="/">
                     <h1>
                         Karaoke Kings
                     </h1>
@@ -72,34 +72,37 @@
             chicharrones venmo hammock marfa raw denim synth gastropub butcher mixtape viral. Paleo DIY succulents
             farm-to-table tbh prism.
         </p>
-        <!-- Artist/Song search form -->
-        <div class="field is-horizontal mx-6 my-6">
-            <div class="field-label">
-                <label class="label">Artist Name</label>
-            </div>
-            <div class="field-body">
-                <div class="field">
-                    <p class="control is-expanded">
-                        <input class="input" type="text" placeholder="Artist Name">
-                    </p>
-                </div>
-                <div class="field-label">
-                    <label class="label">Song Name</label>
-                </div>
-                <div class="field">
-                    <p class="control is-expanded">
-                        <input class="input" type="text" placeholder="Song Name">
-                    </p>
-                </div>
-                <div class="field">
-                    <button type="button" class="btn searchBtn button">
-                        Search
-                    </button>
+    </section>
+    <!-- Artist/Song search form -->
+    <section class="searchBar">
+        <div class="row">
+            <div class="field is-horizontal mx-6 my-6">
+                <div class="input-group input-group-rounded">
+                    <div class="field-label">
+                        <label class="label">Artist Name</label>
+                        <input class="input-group-field" type="search" id="searchArtist" placeholder="Artist">
+                        <div class="field">
+                            <p class="control is-expanded">
+                            <div class="field-label">
+                                <label class="label">Song Name</label>
+                                <input class="input-group-field" type="search" id="searchSong" placeholder="Song">
+                                <div class="field">
+                                    <p class="control is-expanded">
+                                    <div class="input-group-button">
+                                        <button class="button secondary theButton">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
     </section>
     <!-- containers for music player and lyrics -->
+    <!-- Lyrics go here!! -->
+
     <!-- add flex responsiveness for mobile-->
     <section class="section">
         <div class="container">
@@ -111,6 +114,10 @@
                 <label class="label is-1">Lyrics: </label>
                 <div class="column is-5">
                     Lyrics
+                    <!-- Lyrics goes here -->
+                    <div id="lyricsDisplay">
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -125,6 +132,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets\js\script.js"></script>
+    <script src="assets\js\savedScript.js"></script>
 </body>
 
 </html>
