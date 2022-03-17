@@ -104,20 +104,32 @@
     <!-- add flex responsiveness for mobile-->
     <!-- get labels to populate above the columns-->
     <!-- tiles instead of columns -->
-    <section class="section">
-        <div class="container">
-            <div class="columns has-text-centered is-vcentered is-mobile">
-                <label class="label is-1">Artist Playing: </label>
-                <div class="column is-5">
-                    Artist
+    <div class="tile is-ancestor has-text-centered">
+        <div class="tile is-parent is-6 ">
+            <article class="tile is-child notification is-danger box">
+                <p class="title primary-title">Artist Playing: </p>
+                <p class="subtitle secondary-title">Sound ON</p>
+                <!-- use artist display class to implement jquery api -->
+                <div class="content artist-display">
+                    <!--content sound player populates here-->
                 </div>
-                <label class="label is-1">Lyrics: </label>
-                <div class="column is-5">
-                    Lyrics
-                </div>
-            </div>
+            </article>
         </div>
-    </section>
+        <div class="tile is-parent is-6">
+            <article class="tile is-child notification is-primary box">
+                <p class="title primary-title">Lyrics: </p>
+                <p class="subtitle secondary-title">Follow Along</p>
+                <!-- use lyric display class to implement jquery api -->
+                <div class="content lyric-display">
+                    <!-- content lyrics populate here -->
+                </div>
+            </article>
+        </div>
+        
+    </div>
+
+
+
 
     <!-- Footer Section -->
     <footer class="footer">
