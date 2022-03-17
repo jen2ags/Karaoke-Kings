@@ -68,12 +68,15 @@
         <p class="instructions has-text-centered my-2 mx-6 px-6">
             I'm baby keffiyeh fixie tilde mustache banjo tofu banh mi organic taxidermy VHS distillery. Enamel pin
             cornhole pug hot chicken VHS man braid migas small batch pop-up la croix typewriter try-hard tilde prism
-            hell of.
+            hell of
             Keytar leggings organic pickled. You probably haven't heard of them portland taxidermy try-hard selfies
             chicharrones venmo hammock marfa raw denim synth gastropub butcher mixtape viral. Paleo DIY succulents
             farm-to-table tbh prism.
         </p>
+    </section>
         <!-- Artist/Song search form -->
+        <!-- kept searchBar class/ removed columns-->
+        <section class="searchBar">
         <div class="field is-horizontal mx-6 my-6">
             <div class="field-label">
                 <label class="label">Artist Name</label>
@@ -81,7 +84,8 @@
             <div class="field-body">
                 <div class="field">
                     <p class="control is-expanded">
-                        <input class="input" type="text" placeholder="Artist Name">
+                        <!-- kept searchArtist id and type -->
+                        <input class="input" type="search" id="searchArtist" placeholder="Artist Name">
                     </p>
                 </div>
                 <div class="field-label">
@@ -89,22 +93,27 @@
                 </div>
                 <div class="field">
                     <p class="control is-expanded">
-                        <input class="input" type="text" placeholder="Song Name">
+                        <!-- kept searchSong id and type-->
+                        <input class="input" type="search" id="searchSong" placeholder="Song Name">
                     </p>
                 </div>
                 <div class="field">
-                    <button type="button" class="btn searchBtn button">
+                    <!-- kept secondary class -->
+                    <button type="button" class="btn searchBtn secondary button">
                         Search
                     </button>
                 </div>
             </div>
         </div>
     </section>
+    
+
+    
     <!-- containers for music player and lyrics -->
     <!-- add flex responsiveness for mobile-->
     <!-- get labels to populate above the columns-->
     <!-- tiles instead of columns -->
-    <div class="tile is-ancestor has-text-centered">
+    <div class="tile is-ancestor has-text-centered mx-5 my-5 px-3 py-3">
         <div class="tile is-parent is-6 ">
             <article class="tile is-child notification is-danger box">
                 <p class="title primary-title">Artist Playing: </p>
@@ -120,7 +129,8 @@
                 <p class="title primary-title">Lyrics: </p>
                 <p class="subtitle secondary-title">Follow Along</p>
                 <!-- use lyric display class to implement jquery api -->
-                <div class="content lyric-display">
+                <!-- added  lyricsDiplay id here-->
+                <div class="content lyric-display" id="lyricsDisplay">
                     <!-- content lyrics populate here -->
                 </div>
             </article>
