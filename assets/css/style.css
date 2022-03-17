@@ -1,1 +1,13 @@
-/* CSS Styling/layout */
+/* Font styles*/
+body {
+    font-family: "Lora", sans-serif;
+}
+
+h1, h2, h3,
+.page-hover,
+.label,
+.searchBtn,
+.primary-title,
+.secondary-title {
+    font-family: "Sansita Swashed", sans-serif;
+}
