@@ -1,4 +1,6 @@
-/* Font styles*/
+/* root colors */
+
+/* font styles */
 body {
     font-family: "Lora", sans-serif;
 }
@@ -11,3 +13,43 @@ h1, h2, h3,
 .secondary-title {
     font-family: "Sansita Swashed", sans-serif;
 }
+/*font style end*/
+
+/* glow + search button style*/
+.glow {
+    color: #ffff8b ;
+    text-shadow:
+     0 0 7px #ffff00,
+     0 0 42px #ffff00;
+}
+
+.glow-blue {
+    color: #99fafc;
+    text-shadow:
+    0 0 7px #08f7fe,
+    0 0 42px #08f7fe;
+}
+
+.btn:hover {
+    color: #fe53bb;
+}
+
+.btn {
+    background-color:#99fafc;
+    color: #3b27ba;
+    font-weight: bold;
+}
+
+
+/* hero image */
+.hero, nav, .header {
+    position: sticky;
+    position: -webkit-sticky;
+    background-image: url("https://images.unsplash.com/photo-1539375665275-f9de415ef9ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2356&q=80");
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+    background-position: 80%;
+    z-index: 9999;
+}
+/* hero image end */
