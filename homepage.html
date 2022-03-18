@@ -12,40 +12,41 @@
     <title>Karaoke Kings</title>
 </head>
 
-<body>
+<body class="">
     <!-- Logo and Navbar -->
     <header>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav class="navbar " role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <!-- add github deployed page in href -->
                 <a class="navbar-item" href="https://jen2ags.github.io/Karaoke-Kings/">
-                    <h1>
+                    <h1 class="title glow">
                         Karaoke Kings
                     </h1>
                 </a>
             </div>
 
-            <div class="navbar-end page-hover">
+            <div class="navbar-end page-hover my-3 px-3">
                 <!-- link href -->
                 <!-- get started nav scrolls down-->
-                <a class="navbar-item" href="#get-started">
+                <a class="navbar-item glow" href="#get-started">
                     Get Started
                 </a>
                 <!-- Your library is linked to library.html -->
-                <a class="navbar-item" href="library.html">
+                <a class="navbar-item glow" href="library.html">
                     Your Library
                 </a>
             </div>
         </nav>
+    
     </header>
-
     <!-- Hero Section -->
-    <main class="hero mx-5 my-6">
-        <div class="hero-cta has-text-centered">
-            <h2 class="title">
+    <section class="hero is-fullheight-with-navbar">
+        <div class="hero-body has-text-centered">
+            <div class="container">
+            <h2 class="title is-size-1 mx-5 glow-blue main">
                 Calling all Karaoke Kings!
             </h2>
-            <p class="subtitle mx-6 my-5">
+            <p class="subtitle mx-5 my-5 px-5 glow-blue">
                 I'm baby messenger bag vegan godard post-ironic leggings selfies single-origin coffee taiyaki pour-over
                 live-edge pickled sustainable helvetica blue bottle banh mi.
                 Yr freegan hammock, unicorn synth kombucha flannel shabby chic paleo forage.
@@ -54,18 +55,19 @@
             <!-- Ready to begin button format -->
             <span class="has-text-centered">
                 <a href="#get-started">
-                    <button class="button" class="btn startBtn button">
+                    <button class="btn startBtn button is-rounded">
                         Ready to Begin?
                     </button>
                 </a>
             </span>
+         </div>
         </div>
-    </main>
+    </section>
 
     <!-- Get Started Section -->
     <section id="get-started">
-        <h3 class="subtitle has-text-centered mx-6 my-2 py-5">Sing Your Heart Out!</h3>
-        <p class="instructions has-text-centered my-2 mx-6 px-6">
+        <h3 class="subtitle has-text-centered mx-6 my-2 py-5 is-size-3 glow-pink">Sing Your Heart Out</h3>
+        <p class="instructions has-text-centered my-2 mx-6 px-6 glow-pink">
             I'm baby keffiyeh fixie tilde mustache banjo tofu banh mi organic taxidermy VHS distillery. Enamel pin
             cornhole pug hot chicken VHS man braid migas small batch pop-up la croix typewriter try-hard tilde prism
             hell of
@@ -115,8 +117,8 @@
     <!-- tiles instead of columns -->
     <div class="tile is-ancestor has-text-centered mx-5 my-5 px-3 py-3">
         <div class="tile is-parent is-6 ">
-            <article class="tile is-child notification is-danger box">
-                <p class="title primary-title">Artist Playing: </p>
+            <article class="tile is-child notification box">
+                <p class="title primary-title">Artist Playing : </p>
                 <p class="subtitle secondary-title">Sound ON</p>
                 <!-- use artist display class to implement jquery api -->
                 <div class="content artist-display">
@@ -125,8 +127,8 @@
             </article>
         </div>
         <div class="tile is-parent is-6">
-            <article class="tile is-child notification is-primary box">
-                <p class="title primary-title">Lyrics: </p>
+            <article class="tile is-child notification box">
+                <p class="title primary-title">Lyrics : </p>
                 <p class="subtitle secondary-title">Follow Along</p>
                 <!-- use lyric display class to implement jquery api -->
                 <!-- added  lyricsDiplay id here-->
@@ -142,14 +144,13 @@
 
 
     <!-- Footer Section -->
-    <footer class="footer">
+    <footer class="footer py-5">
         <div class="content has-text-centered is-small">
             <p> &copy; 2022 | Built with &#128420; by Cheryl Cruz, Mason Urrabas, and Jennifer Jennings</p>
         </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <script src="Karaoke-Kings\assets\js\savedScript.js"></script>
 </body>
 
