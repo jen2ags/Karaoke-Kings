@@ -1,10 +1,19 @@
 /* root colors */
-
-/* font styles */
-body {
-    font-family: "Lora", sans-serif;
+:root {
+    --magenta: #fe53bb;
+    --dark: #3b27ba;
+    --light-blue: #99fafc;
+    --blue-shadow: #08f7fe;
+    --yellow: #ffff8b;
+    --yellow-shadow: #ffff00;
 }
 
+body {
+    font-family: "Lora", sans-serif;
+    background-color:#2c1386
+}
+
+/* font styles */
 h1, h2, h3,
 .page-hover,
 .label,
@@ -15,31 +24,40 @@ h1, h2, h3,
 }
 /*font style end*/
 
-/* glow + search button style*/
+/* glow + button style*/
 .glow {
-    color: #ffff8b ;
+    color: var(--yellow);
     text-shadow:
-     0 0 7px #ffff00,
-     0 0 42px #ffff00;
+     0 0 7px var(--yellow-shadow),
+     0 0 42px var(--yellow-shadow);
 }
 
-.glow-blue {
-    color: #99fafc;
+.glow-blue, .label {
+    color: var(--light-blue);
     text-shadow:
-    0 0 7px #08f7fe,
-    0 0 42px #08f7fe;
+    0 0 7px var(--blue-shadow),
+    0 0 42px var(--blue-shadow);
+}
+
+
+.glow-pink {
+    color: #ff7dff;
+    text-shadow:
+    0 0 7px #ff00ff,
+    0 0 42px #ff00ff;
 }
 
 .btn:hover {
-    color: #fe53bb;
+    color: var(--magenta);
 }
 
 .btn {
-    background-color:#99fafc;
-    color: #3b27ba;
+    background-color: var(--light-blue);
+    color: var(--dark);
     font-weight: bold;
 }
 
+/* glow and button style end*/
 
 /* hero image */
 .hero, nav, .header {
@@ -53,3 +71,10 @@ h1, h2, h3,
     z-index: 9999;
 }
 /* hero image end */
+
+/* tile section */
+
+.box {
+    background-color: var(--light-blue);
+    color: var(--dark);
+}
