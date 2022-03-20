@@ -23,7 +23,8 @@ h1, h2, h3,
 .label,
 .searchBtn,
 .primary-title,
-.secondary-title {
+.secondary-title,
+.homepage {
     font-family: "Sansita Swashed", sans-serif;
 }
 /*font style end*/
@@ -71,7 +72,7 @@ nav, .navbar-end {
 }
 
 /* hero image */
-.hero, nav, .header, .footer {
+.hero, nav, .header, .footer, header {
     position: sticky;
     position: -webkit-sticky;
     background-image: url("https://images.unsplash.com/photo-1539375665275-f9de415ef9ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2356&q=80");
