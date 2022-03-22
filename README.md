@@ -1,7 +1,7 @@
 # Karaoke-Kings
 
 ## Purpose
-The purpose of creating Karaoke Kings is to provide a one stop shop for all karaoke enthusiasts! Users will be able to search their favorite song name and artist. When searched, the lyrics and youtube video will display on the homescreen for the user. The user will also be able to navigate to their personal library where the users 8 most recent song name and artist will be displayed. When the user clicks on one of their favorite songs, they are taken back to the homepage where that favorite song's lyrics and video are displayed.
+The purpose of creating Karaoke Kings is to provide a one stop shop for all karaoke enthusiasts! Users will be able to search their favorite song name and artist. When searched, the lyrics and youtube video will display on the homescreen for the user. The user will also be able to navigate to their personal library where the users 8 most recent song name and artist will be displayed. 
 
 ## Built With
 *HTML
@@ -11,6 +11,7 @@ The purpose of creating Karaoke Kings is to provide a one stop shop for all kara
 *Bulma
 *Google Fonts
 *Youtube API
+*lyrics.ovh API
 
 ## Website
 https://jen2ags.github.io/Karaoke-Kings/
