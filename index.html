@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Sansita+Swashed&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets\css\style.css" />
+    <title>Karaoke Kings</title>
+</head>
+
+<body>
+    <!-- Logo and Navbar -->
+    <header>
+        <nav class="navbar " role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <!-- add github deployed page in href -->
+                <a class="navbar-item" href="https://jen2ags.github.io/Karaoke-Kings/">
+                    <h1 class="title glow">
+                        Karaoke Kings
+                    </h1>
+                </a>
+            </div>
+
+            <div class="navbar-end page-hover my-3 px-3">
+                <!-- link href -->
+                <!-- get started nav scrolls down-->
+                <a class="navbar-item glow" href="#get-started">
+                    Get Started
+                </a>
+                <!-- Your library is linked to library.html -->
+                <a class="navbar-item glow" href="library.html">
+                    Your Library
+                </a>
+            </div>
+        </nav>
+
+    </header>
+    <!-- Hero Section -->
+    <section class="hero is-fullheight-with-navbar">
+        <div class="hero-body has-text-centered">
+            <div class="container">
+                <h2 class="title is-size-1 mx-5 glow-blue main">
+                    Calling all Karaoke Kings!
+                </h2>
+                <p class="subtitle mx-5 my-5 px-5 is-size-5 glow-blue">
+                    Want to skip the karaoke bar tonight? Want to stay home and have your own karaoke party? Well you
+                    can do just that with Karaoke Kings!
+
+                </p>
+                <!-- Ready to begin button format -->
+                <span class="has-text-centered">
+                    <a href="#get-started">
+                        <button class="btn startBtn button is-rounded">
+                            Ready to Begin?
+                        </button>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Started Section -->
+    <section id="get-started">
+        <h3 class="subtitle has-text-centered mx-6 my-2 py-5 is-size-3 glow-pink">Sing Your Heart Out</h3>
+        <p class="instructions has-text-centered my-2 mx-6 px-6 is-size-5 glow-pink">
+            It's as easy as searching for your favorite artist and song name. We've also made sure to keep your recent
+            searches stored in your own personal library!
+        </p>
+    </section>
+    <!-- Artist/Song search form -->
+    <!-- kept searchBar class/ removed columns-->
+    <section class="searchBar">
+        <div class="field is-horizontal mx-6 my-6">
+            <div class="field-label">
+                <label class="label">Artist Name</label>
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <p class="control is-expanded">
+                        <!-- kept searchArtist id and type -->
+                        <input class="input artist-input" type="search" id="searchArtist" placeholder="Artist Name">
+                    </p>
+                </div>
+                <div class="field-label">
+                    <label class="label">Song Name</label>
+                </div>
+                <div class="field">
+                    <p class="control is-expanded">
+                        <!-- kept searchSong id and type-->
+                        <input class="input lyric-input" type="search" id="searchSong" placeholder="Song Name">
+                    </p>
+                </div>
+                <div class="field">
+                    <!-- kept secondary class -->
+                    <button type="button" class="btn searchBtn secondary theButton button">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <!-- add flex responsiveness for mobile-->
+    <!-- get labels to populate above the columns-->
+    <!-- tiles instead of columns -->
+    <div class="tile is-ancestor has-text-centered mx-5 my-5 px-3 py-3">
+        <div class="tile is-parent is-6 ">
+            <article class="tile is-child notification box">
+                <p class="title primary-title">Artist Playing : </p>
+                <p class="subtitle secondary-title">Sound ON</p>
+                <!-- use artist display class to implement jquery api -->
+                <div class="content artist-display">
+                    <div id="video1">
+
+                    </div>
+                    <!--content sound player populates here-->
+                </div>
+            </article>
+        </div>
+        <div class="tile is-parent is-6">
+            <article class="tile is-child notification box">
+                <p class="title primary-title">Lyrics : </p>
+                <p class="subtitle secondary-title">Follow Along</p>
+                <!-- use lyric display class to implement jquery api -->
+                <!-- added  lyricsDiplay id here-->
+                <div class="content lyric-display" id="lyricsDisplay">
+                    <!-- content lyrics populate here -->
+
+                    <div id="lyricsDisplay">
+
+                    </div>
+
+
+                </div>
+            </article>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- Footer Section -->
+    <footer class="footer py-5">
+        <div class="content has-text-centered is-small">
+            <p> &copy; 2022 | Built with &#128420; by Cheryl Cruz, Mason Urrabas, and Jennifer Jennings</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/savedScript.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
