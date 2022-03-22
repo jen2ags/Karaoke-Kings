@@ -96,22 +96,6 @@ function storeDataSong() {
 
 };
 
-// This hides the carousel, if the user wants to hide it, but he doesn't have to... personal choice
-
-$("#hide").click(function () {
-    $(".orbit-container").hide();
-    $(".orbit-bullets").hide();
-    $(".orbit-previous").hide();
-    $(".orbit-next").hide();
-});
-
-$("#show").click(function () {
-    $(".orbit-container").show();
-    $(".orbit-bullets").show();
-    $(".orbit-previous").show();
-    $(".orbit-next").show();
-});
-
 // Event listener for the search button
 
 $(".theButton").on("click", function (event) {
@@ -136,21 +120,6 @@ $(".input lyric-input").on("keyup", function (event) {
         newSearch();
         $('.videos').css("display", "block");
         $('ul li:first-child').addClass("is-active");
-
-    }
-});
-
-// This makes the karaoke button change the background to a more 'fun' animated video
-
-$(".karaoke").on("click", function () {
-    var background = $("#bgvid");
-    var body = $("#app-body")
-    if (background.css("display") === "none") {
-        background.css("display", "block");
-        body.css("color", "white");
-    } else {
-        background.css("display", "none");
-        body.css("color", "black");
 
     }
 });
