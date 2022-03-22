@@ -6,7 +6,7 @@ var userArrayArtist = JSON.parse(localStorage.getItem("Last Artist")) || [];
 var userArraySong = JSON.parse(localStorage.getItem("Last Song")) || [];
 var lastArtist = $("#lastSearches");
 var lastSong = $("#lastSong");
-
+var video = "";
 
 $(document).ready(function () {
 
@@ -48,6 +48,15 @@ $(document).ready(function () {
             console.log(data.lyrics);
             localStorage.setItem("Saved Lyrics", JSON.stringify(data));
         })
+    };
+
+    // Function for searching video
+
+    function searchVideo(artist) {
+        console.log("clicked last result");
+        var userInputArtist = artist;
+        videoSearch(APIKey, userInputArtist, 3);
+
     };
     // Function for clearing local Storage and saved music
 
