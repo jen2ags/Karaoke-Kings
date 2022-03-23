@@ -2,7 +2,8 @@
 var APIKey = "AIzaSyAdV2wbcQnrRAYhPMUNa2fvWPog0KKf3Dk"
 // var APIKey ="AIzaSyC06MD-KSKvZjt5u-g6QR7T2LZpXQclNs8"
 // var APIKey = "AIzaSyAcAK8zAbrh0XiEyVmDFtrqIEnY7N4Qrag";
-var APIKey ="AIzaSyB4rCoMIg699n89bxSQSP47jsdkpRgXRJ4"
+
+var APIKey = "AIzaSyB4rCoMIg699n89bxSQSP47jsdkpRgXRJ4"
 var userArrayArtist = JSON.parse(localStorage.getItem("Last Artist")) || [];
 var userArraySong = JSON.parse(localStorage.getItem("Last Song")) || [];
 var lastArtist = $("#lastSearches");
@@ -40,6 +41,21 @@ $(document).ready(function () {
         }
     };
 
+    // This is a function for getting lyrics using "suggest" Will be used in a "get lucky" button
+
+function lyricSearchSuggest (song) {
+
+    $.get("https://api.lyrics.ovh/suggest/" + song, function (data) {
+        //document.getElementById("lyricsDisplay").innerHTML = data.lyrics.replace(new RegExp("\n", "g"), "<br>");
+        console.log(data.lyrics);
+        console.log(song);
+        console.log(data);
+        localStorage.setItem("Saved Lyrics", JSON.stringify(data));
+        console.log(storedLyrics);
+    })
+};
+
+
     // Function for searching lyrics
     function lyricSearchPrueba(artist, song) {
 
@@ -56,7 +72,7 @@ $(document).ready(function () {
     function searchVideo(artist) {
         console.log("clicked last result");
         var userInputArtist = artist;
-        videoSearch(APIKey, userInputArtist, 3);
+        videoSearch(APIKey, userInputArtist, 10);
 
     };
     // Function for clearing local Storage and saved music
