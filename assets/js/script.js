@@ -1,5 +1,6 @@
 // var APIKey = "AIzaSyAIfrYqV42vZikjEowH8Lh4CtsgCpKMQXI";
 //var APIKey = "AIzaSyAcAK8zAbrh0XiEyVmDFtrqIEnY7N4Qrag";
+
 var APIKey ="AIzaSyB4rCoMIg699n89bxSQSP47jsdkpRgXRJ4"
 var userArrayArtist = JSON.parse(localStorage.getItem("Last Artist")) || [];
 var userArraySong = JSON.parse(localStorage.getItem("Last Song")) || [];
@@ -20,6 +21,7 @@ function newSearch() {
     $("#searchSong").val("");
 
 };
+
 
 // Function for searching videos using Youtube API
 
