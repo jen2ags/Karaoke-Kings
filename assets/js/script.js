@@ -1,7 +1,7 @@
 // var APIKey = "AIzaSyAIfrYqV42vZikjEowH8Lh4CtsgCpKMQXI";
 //var APIKey = "AIzaSyAcAK8zAbrh0XiEyVmDFtrqIEnY7N4Qrag";
-
-var APIKey ="AIzaSyB4rCoMIg699n89bxSQSP47jsdkpRgXRJ4"
+var APIKey = "AIzaSyBImPurgd9sYRVOqq1IZw4K6myf8NVGB1k";
+//var APIKey ="AIzaSyB4rCoMIg699n89bxSQSP47jsdkpRgXRJ4"
 var userArrayArtist = JSON.parse(localStorage.getItem("Last Artist")) || [];
 var userArraySong = JSON.parse(localStorage.getItem("Last Song")) || [];
 var video = "";
