@@ -1,101 +1,127 @@
-<!DOCTYPE html>
-<html lang="en">
+// var APIKey = "AIzaSyAIfrYqV42vZikjEowH8Lh4CtsgCpKMQXI";
+//var APIKey = "AIzaSyAcAK8zAbrh0XiEyVmDFtrqIEnY7N4Qrag";
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--bulma styling-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
-    <!--google fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora&family=Sansita+Swashed&display=swap" />
-    <!--link to css stylesheet-->
-    <link rel="stylesheet" href="assets\css\style.css" />
-    <title>Karaoke Kings/Your Library</title>
-</head>
+var APIKey ="AIzaSyB4rCoMIg699n89bxSQSP47jsdkpRgXRJ4"
+var userArrayArtist = JSON.parse(localStorage.getItem("Last Artist")) || [];
+var userArraySong = JSON.parse(localStorage.getItem("Last Song")) || [];
+var video = "";
+$(document).ready(function () {
 
-<body>
-    <header>
-        <div>
-            <button class="button is-primary mx-3 my-3">
-                <a class="homepage" href="homepage.html">← Back to Homepage</a>
-            </button>
-        </div>
-    </header>
-    <!--title and header for My Library-->
-    <section class="mx-5 my-6 has-text-centered">
-        <h1 class="title">Your Karaoke Library</h1>
-        <p class="description mx-5 my-6">All of your recent karaoke hits in your own personal library.</p>
-        <!--button to clear my library-->
-        <button class="button is-danger is-medium" id="clear">Clear My Library</button>
-    </section>
+});
+// This is what happens when you click the search button
 
-    <!--containers for rach of the recent searches with a button to link to the video and lyrics-->
-    <section class="favorites has-text-centered mx-6 my-6">
-        <button class="container is-fluid my-2 px-4 py-4">
-            <div class="song">
-                <div class="columns">
-                    Artist:
-                    <ul id="lastSearches" style="display: inline-grid;">
-                        <!-- Last Searches Goes Here -->
-                    </ul>
-                </div>
+function newSearch() {
+    var userInputArtist = $("#searchArtist").val().trim();
+    var userInputSong = $("#searchSong").val().trim();
+    videoSearch(APIKey, userInputArtist + "+" + userInputSong, 3);
+    lyricSearch();
+    storeDataArtist();
+    storeDataSong();
+    $("#searchArtist").val("");
+    $("#searchSong").val("");
 
-                <div class="columns">
-                    Song:
-                    <ul id="lastSong" style="display: inline-grid;">
-                        <!-- Last Searches Goes Here -->
+};
 
-                    </ul>
-                </div>
-            </div>
-        </button>
-        <button class="container is-fluid my-2 px-4 py-4">
-            <div class="song">Favorite #2</div>
-        </button>
-        <button class="container is-fluid my-2 px-4 py-4">
-            <div class="song">Favorite #3</div>
-        </button>
-        <button class="container is-fluid my-2 px-4 py-4">
-            <div class="song">Favorite #4</div>
-        </button>
-        <button class="container is-fluid my-2 px-4 py-4">
-            <div class="song">Favorite #5</div>
-        </button>
-        <button class="container is-fluid my-2 px-4 py-4">
-            <div class="song">Favorite #6</div>
-        </button>
-        <button class="container is-fluid my-2 px-4 py-4">
-            <div class="song">Favorite #7</div>
-        </button>
-        <button class="container is-fluid my-2 px-4 py-4">
-            <div class="song">Favorite #8</div>
-        </button>
-    </section>
 
-    <div class="columns">
-        <div id="lyricsDisplaySaved" style="display: inline-grid;">
-            <!-- Lyrics goes here -->
+// Function for searching videos using Youtube API
 
-        </div>
-    </div>
-    <!-- Footer Section -->
-    <footer class="footer">
-        <div class="content has-text-centered is-small">
-            <p> &copy; 2022 | Built with &#128420; by Cheryl Cruz, Mason Urrabas, and Jennifer Jennings</p>
-        </div>
-    </footer>
-    <div class="columns">
-        <div id="lyricsDisplaySaved" style="display: inline-grid;">
-            <!-- Lyrics goes here -->
+function videoSearch(key, search, maxResults) {
+    $.get("https://www.googleapis.com/youtube/v3/search?key=" + key + "&type=video&part=snippet&maxResults=" + maxResults + "&q=" + search, function (data) {
+        console.log(data.items);
+        data.items.forEach(function (item, index) {
+           video = `
+           <iframe width="420" height="315" src="http://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
+            `
+           $("#video" + (index + 1)).html(video);
 
-        </div>
-    </div>
-    <!--JQuery link-->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <!--link to the javascript-->
-    <script src="assets\js\script.js"></script>
-    <script src="assets\js\savedScript.js"></script>
-</body>
+       })
+    })
+};
 
-</html>
+// Function for searching lyrics using Lyrics OVH
+
+function lyricSearch(artist, song) {
+    var artist = $("#searchArtist").val().trim().replace(/ /g, '+');
+    var song = $("#searchSong").val().trim().replace(/ /g, '+');
+
+    $.get("https://api.lyrics.ovh/v1/" + artist + "/" + song, function (data) {
+        $("#lyricsDisplay").html(data.lyrics.replace(new RegExp("\n", "g"), "<br>"));
+
+        localStorage.setItem("Saved Lyrics", JSON.stringify(data));
+    })
+};
+
+// Function for storing the artist name in local storage
+
+function storeDataArtist() {
+    var userInputArtist = $("#searchArtist").val().trim().replace(/ /g, '+');
+    var containsSearch = false;
+
+    if (userArrayArtist != null) {
+
+        $(userArrayArtist).each(function (x) {
+            if (userArrayArtist[x] === userInputArtist) {
+                // containsSearch = true;
+            }
+        });
+    }
+
+    if (containsSearch === false) {
+        userArrayArtist.push(userInputArtist)
+    }
+
+    localStorage.setItem("Last Artist", JSON.stringify(userArrayArtist));
+    console.log(userArrayArtist);
+
+};
+
+// Function for storing the song name in local storage
+
+function storeDataSong() {
+    var userInputSong = $("#searchSong").val().trim().replace(/ /g, '+');
+    var containsSearch = false;
+
+    if (userArraySong != null) {
+
+        $(userArraySong).each(function (x) {
+            if (userArraySong[x] === userInputSong) {
+                // containsSearch = true;
+            }
+        });
+    }
+
+    if (containsSearch === false) {
+        userArraySong.push(userInputSong)
+    }
+
+    localStorage.setItem("Last Song", JSON.stringify(userArraySong));
+
+};
+
+// Event listener for the search button
+
+$(".theButton").on("click", function (event) {
+    event.preventDefault();
+    newSearch();
+    $('ul li:first-child').addClass("is-active");
+
+});
+
+// Event listener for Enter Key
+
+$(".input artist-input").on("keyup", function (event) {
+    if (event.keyCode === 13) {
+        newSearch();
+        $('.videos').css("display", "block");
+        $('ul li:first-child').addClass("is-active");
+
+    }
+});
+$(".input lyric-input").on("keyup", function (event) {
+    if (event.keyCode === 13) {
+        newSearch();
+        $('.videos').css("display", "block");
+        $('ul li:first-child').addClass("is-active");
+
+    }
+});
