@@ -30,7 +30,7 @@ function videoSearch(key, search, maxResults) {
         console.log(data.items);
         data.items.forEach(function (item, index) {
            video = `
-           <iframe width="420" height="315" src="http://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
+           <iframe width="420" height="315" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
             `
            $("#video" + (index + 1)).html(video);
 
